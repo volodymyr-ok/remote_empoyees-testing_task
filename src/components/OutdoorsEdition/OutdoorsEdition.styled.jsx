@@ -12,6 +12,8 @@ export const Section = styled.section`
 export const Container = styled.div`
   display: flex;
   gap: 118px;
+  /* justify-content: space-between; */
+  padding-right: 118px;
 `;
 
 export const Aside = styled.aside`
@@ -70,8 +72,6 @@ export const List = styled.ul`
 
   display: flex;
   gap: 60px;
-  /* justify-content: space-between;
-  align-items: center; */
 `;
 
 export const Item = styled.li`
@@ -89,10 +89,12 @@ export const ImageWrap = styled.div`
   height: 270px;
   margin-bottom: 24px;
   background-color: ${colors.minorText};
+  overflow: hidden;
 `;
 export const Image = styled.img`
   width: 270px;
   height: 270px;
+  object-fit: cover;
 `;
 
 export const Title = styled.h3`
@@ -118,4 +120,7 @@ export const Button = styled.button`
   background-color: transparent;
   border: none;
   text-align: start;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
 `;

@@ -36,6 +36,7 @@ export const Item = styled.li`
   align-items: center;
   margin-bottom: 40px;
   font-weight: 700;
+  color: ${colors.notActive};
 
   :first-child:after {
     content: '';
@@ -44,10 +45,7 @@ export const Item = styled.li`
     width: 90px;
     height: 1px;
     background-color: white;
-  }
-
-  :not(:first-child) {
-    color: ${colors.notActive};
+    color: white;
   }
 `;
 

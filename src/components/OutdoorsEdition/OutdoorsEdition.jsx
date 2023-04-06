@@ -16,7 +16,6 @@ import {
   SubTitle,
   Title,
 } from './OutdoorsEdition.styled';
-// const image = require('../../assets/img/ollantaytambo.jpg');
 
 const OutdoorsEdition = () => {
   const cardList = [
@@ -25,28 +24,26 @@ const OutdoorsEdition = () => {
       location: 'Peru',
       description:
         'Ad lorem aliquid laoreet pri, possim iisque ad vim. Te graecis maluisset eum. Sit no platonem consetetur mediocritatem, in alienum.',
-      imageURI: '../../assets/img/ollantaytambo.jpg',
+      imageURI: require('../../assets/img/ollantaytambo.jpg'),
     },
     {
       place: 'Antelope Canyon',
       location: 'USA',
       description:
         'Laudem labore eruditi qui ex, ullamcorper suscipiantur usu ut. Mazim elitr et his, id mei enim pertinax.',
-      imageURI: '../../assets/img/antelope_canyon-Main.jpg',
+      imageURI: require('../../assets/img/antelope_canyon-Main.jpg'),
     },
     {
       place: 'Lake Louise',
       location: 'Canada',
       description:
         'No nec torquatos incorrupte quaerendum. Quaeque phaedrum efficiantur qui in. Vel nobis munere epicurei ea.',
-      imageURI: '../../assets/img/lake_louise.jpg',
+      imageURI: require('../../assets/img/lake_louise.jpg'),
     },
   ];
 
   return (
     <>
-      {/* <image src={image} width={'200px'} height={'200px'} /> */}
-
       <Section>
         <Container>
           <Aside>
@@ -54,7 +51,9 @@ const OutdoorsEdition = () => {
 
             <MainDescr>Some of featured spot that you might want visit before you die</MainDescr>
 
-            <MainLink>View all</MainLink>
+            <MainLink href={'./'} target="_blank" rel="noreferrer noopener">
+              View all
+            </MainLink>
           </Aside>
 
           <List>

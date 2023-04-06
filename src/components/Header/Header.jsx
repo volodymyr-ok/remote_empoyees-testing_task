@@ -13,11 +13,15 @@ const Header = () => {
       <NavWrapper>
         <List>
           <Item>
-            <Link>My Collection</Link>
+            <Link href={'./'} target="_blank" rel="noreferrer noopener">
+              My Collection
+            </Link>
           </Item>
 
           <Item>
-            <Link>Galih Pambudi</Link>
+            <Link href={'./'} target="_blank" rel="noreferrer noopener">
+              Galih Pambudi
+            </Link>
           </Item>
         </List>
 
