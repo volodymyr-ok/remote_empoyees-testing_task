@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
+import { colors } from './utils/repeatStyles';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 *,
 *::before,
 *::after {
@@ -10,10 +11,10 @@ html {
  height : 100%;
 }
 body {
-  font-family: sans-serif;
+  font-family: 'Libre Franklin', sans-serif;
   letter-spacing: 0.04em;
-  background-color: #FDF7F2;
-  color: #111111;
+  background-color: ${colors.background};
+  color: ${colors.mainText};
   margin: 0;
   padding: 0;
   min-width: 320px;
@@ -39,5 +40,9 @@ li {
 img {
   display: block;
   width: 100%;
+}
+a{
+  text-decoration: none;
+  color: inherit;
 }
 `;
