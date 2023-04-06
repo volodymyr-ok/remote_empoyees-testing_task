@@ -8,8 +8,8 @@ export const Section = styled.section`
   background-size: center;
   background-repeat: no-repeat;
 
-  box-shadow: inset 0px 0px 200px calc(100vw) rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: inset 0px 0px 200px calc(100vw) rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 200px calc(100vw) rgba(146, 146, 146, 0.3);
+  -webkit-box-shadow: inset 0px 0px 200px calc(100vw) rgba(146, 146, 146, 0.3);
 `;
 
 export const Container = styled.div`
@@ -19,11 +19,11 @@ export const Container = styled.div`
   display: flex;
 `;
 
-export const Aside = styled.aside`
+export const Aside = styled.div`
   background-color: ${colors.backdrop};
-  height: calc(100vh - 90px + 20vh);
+  height: calc(120vh - 90px);
   width: 270px;
-  padding-top: calc(60px + 90px);
+  padding-top: calc(80px);
   padding-left: 56px;
 `;
 

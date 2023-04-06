@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/repeatStyles';
-import { Div } from '../CommonContainer/CommonContainer.styled';
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { RiFacebookFill } from 'react-icons/ri';
 
@@ -14,7 +13,10 @@ export const FooterSection = styled.footer`
   color: ${colors.minorText};
 `;
 
-export const Container = styled(Div)`
+export const Container = styled.div`
+  margin-left: 56px;
+  margin-right: 118px;
+
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -28,7 +30,7 @@ export const Copyright = styled.p`
 
 export const List = styled.ul`
   display: flex;
-  gap: 10px;
+  gap: 20px;
   align-items: center;
 `;
 
