@@ -5,7 +5,7 @@ import { colors } from '../../utils/repeatStyles';
 const LogoLink = styled.a`
   font-size: 24px;
   font-weight: bold;
-  color: ${colors.primaryText};
+  color: ${colors.minorText};
 `;
 
 const Logo = () => {

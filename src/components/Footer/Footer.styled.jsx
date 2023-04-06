@@ -11,7 +11,7 @@ export const FooterSection = styled.footer`
   background-color: ${colors.mainAccent};
   display: flex;
   align-items: center;
-  color: ${colors.primaryText};
+  color: ${colors.minorText};
 `;
 
 export const Container = styled(Div)`
@@ -45,11 +45,11 @@ export const Link = styled.a`
 `;
 
 export const IconInsta = styled(AiOutlineInstagram)`
-  color: ${colors.primaryText};
+  color: ${colors.minorText};
 `;
 export const IconFace = styled(RiFacebookFill)`
-  color: ${colors.primaryText};
+  color: ${colors.minorText};
 `;
 export const IconTwit = styled(AiOutlineTwitter)`
-  color: ${colors.primaryText};
+  color: ${colors.minorText};
 `;

@@ -3,25 +3,82 @@ import { colors } from '../../utils/repeatStyles';
 const mainBG = require('../../assets/img/mainBg.jpg');
 
 export const Section = styled.section`
-  min-height: 100vh;
-  height: 100%;
+  min-height: 120vh;
   background-image: url(${mainBG});
   background-size: center;
   background-repeat: no-repeat;
-  -webkit-box-shadow: inset 0px 0px 200px 20px rgba(0, 0, 0, 0.5);
+
+  box-shadow: inset 0px 0px 200px calc(100vw) rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: inset 0px 0px 200px calc(100vw) rgba(0, 0, 0, 0.5);
 `;
 
-export const Container = styled.section`
-  padding: 90px 0 0;
+export const Container = styled.div`
   width: 100%;
+  padding-top: 90px;
+  height: calc(100vh);
+  display: flex;
 `;
 
 export const Aside = styled.aside`
   background-color: ${colors.backdrop};
-  height: calc(100vh - 90px);
+  height: calc(100vh - 90px + 20vh);
   width: 270px;
-  padding: 60px 0 0 56px;
+  padding-top: calc(60px + 90px);
+  padding-left: 56px;
 `;
 
-export const List = styled.ul``;
-export const Item = styled.li``;
+export const List = styled.ul`
+  position: relative;
+`;
+
+export const Item = styled.li`
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  font-weight: 700;
+
+  :first-child:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    width: 90px;
+    height: 1px;
+    background-color: white;
+  }
+
+  :not(:first-child) {
+    color: ${colors.notActive};
+  }
+`;
+
+export const MainContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  margin: auto 0 auto 118px;
+`;
+
+export const Title = styled.h1`
+  font-size: 54px;
+  font-weight: 700;
+  max-width: 360px;
+`;
+
+export const Text = styled.p`
+  font-size: 12px;
+  font-weight: 700;
+  max-width: 360px;
+  line-height: 20px;
+`;
+
+export const Button = styled.button`
+  cursor: pointer;
+  border-radius: 20px;
+  border: none;
+  background-color: ${colors.mainAccent};
+  width: 128px;
+  height: 36px;
+  text-transform: capitalize;
+  font-size: 12px;
+  font-weight: 700;
+`;

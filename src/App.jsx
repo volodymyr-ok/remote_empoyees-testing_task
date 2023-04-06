@@ -3,6 +3,7 @@ import { GlobalStyles } from './GlobalStyles';
 import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Footer from './components/Footer/Footer';
+import OutdoorsEdition from './components/OutdoorsEdition/OutdoorsEdition';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <OutdoorsEdition />
       </main>
       <Footer />
     </>
