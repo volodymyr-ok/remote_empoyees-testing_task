@@ -23,7 +23,7 @@ const Subscribe = () => {
       <Container>
         <Title>Subscribe to our news letter</Title>
 
-        <Form onSubmit={handleSubmit}>
+        <Form data-netlify="true" onSubmit={handleSubmit}>
           <InputWrap>
             <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
 
