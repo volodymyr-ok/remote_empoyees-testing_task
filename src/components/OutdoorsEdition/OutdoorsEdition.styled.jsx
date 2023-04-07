@@ -22,7 +22,7 @@ export const Aside = styled.aside`
   width: 270px;
   min-height: 100%;
 
-  padding-top: 84px;
+  /* padding-top: 84px; */
 `;
 
 export const MainTitle = styled.h2`
@@ -71,7 +71,7 @@ export const MainLink = styled.a`
 `;
 
 export const List = styled.ul`
-  padding-top: 148px;
+  padding-top: 64px;
 
   display: flex;
   gap: 60px;

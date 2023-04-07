@@ -1,7 +1,7 @@
 export const colors = {
   background: '#28272a',
   mainAccent: '#fee251',
-  hoveredAccent: '#fbff0f',
+  hoveredAccent: '#fdff8d',
   mainText: '#fff',
   minorText: '#323232',
   subTitle: '#626262',

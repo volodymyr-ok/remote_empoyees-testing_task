@@ -1,16 +1,13 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/repeatStyles';
-// const mainBG = require('../../assets/img/starrynight_and_muntains.jpg');
 const mainBG = require('../../assets/img/starrynight.jpg');
 
 export const Section = styled.section`
   position: relative;
   z-index: 1;
-
   /* box-shadow: inset 0px 300px 300px 0 ${colors.background},
     inset 0px -10vh 100px 0 ${colors.background}; */
   /* min-height: 300vh; */
-
   /* background-image: url(${mainBG});
   background-size: 100%;
   background-position: top;
@@ -38,7 +35,6 @@ export const Background = styled.div`
 export const Container = styled.div`
   /* padding-top: 150px;
   padding-left: 270px; */
-
   padding: 150px 118px 90px 270px;
   /* min-width: 100%; */
 `;
@@ -86,9 +82,9 @@ export const SubTitle = styled.h4`
 
 export const Descr = styled.p`
   max-width: 600px;
-  font-size: 12px;
+  font-size: 11px;
   line-height: 18px;
-  font-weight: 700;
+  font-weight: 500;
   color: ${colors.descrText};
   margin-bottom: 28px;
 `;
