@@ -65,7 +65,7 @@ const OutdoorsEdition = () => {
 
           <List>
             {cardList.map(({ uri, imageURI, place, location, description }) => (
-              <Item>
+              <Item key={imageURI}>
                 <CardWrap>
                   <ImageWrap>
                     <Image src={imageURI} alt={place} />

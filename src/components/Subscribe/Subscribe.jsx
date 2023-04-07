@@ -13,8 +13,22 @@ import {
 const Subscribe = () => {
   const [email, setEmail] = useState('');
   const handleChange = ({ target: { value } }) => setEmail(value);
+
   const handleSubmit = event => {
     event.preventDefault();
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({ email }).toString(),
+    })
+      .then(() => {
+        //   setTimeout(openSuccessModal, 700);
+        //   setTimeout(closeSuccessModal, 3000);
+        console.log('Email sent');
+      })
+      .catch(error => console.log('Sending email failed'));
+
     setEmail('');
   };
 
@@ -23,7 +37,7 @@ const Subscribe = () => {
       <Container>
         <Title>Subscribe to our news letter</Title>
 
-        <Form data-netlify="true" onSubmit={handleSubmit}>
+        <Form name="subscription" method="POST" data-netlify="true" onSubmit={handleSubmit}>
           <InputWrap>
             <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
 

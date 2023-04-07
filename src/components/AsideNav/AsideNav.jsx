@@ -30,7 +30,7 @@ const AsideNav = () => {
     <Nav>
       <List>
         {navLinks.map(({ name, path }) => (
-          <Item>
+          <Item key={name}>
             <NavLink to={path}>{name}</NavLink>
           </Item>
         ))}

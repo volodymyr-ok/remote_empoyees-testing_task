@@ -15,6 +15,7 @@ export const ImageWrap = styled.div`
 
 export const Image = styled.img`
   height: 600px;
+  object-fit: cover;
 `;
 
 export const Content = styled.div`
@@ -45,7 +46,7 @@ export const Quote = styled.p`
   color: ${colors.descrText};
 `;
 
-export const Descr = styled.p`
+export const Descr = styled.div`
   max-width: 356px;
   margin-bottom: 54px;
 
