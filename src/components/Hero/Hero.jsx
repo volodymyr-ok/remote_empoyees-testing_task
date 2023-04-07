@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Container, MainContent, Section, Text, Title } from './Hero.styled';
+import { Container, MainContent, Section, Text, Title } from './Hero.styled';
 import AsideNav from '../AsideNav/AsideNav';
+import BtnReadMore from '../BtnReadMore/BtnReadMore';
 
 const Hero = () => {
   return (
@@ -16,7 +17,7 @@ const Hero = () => {
             place that you never imagine before.
           </Text>
 
-          <Button>Read more</Button>
+          <BtnReadMore />
         </MainContent>
       </Container>
     </Section>

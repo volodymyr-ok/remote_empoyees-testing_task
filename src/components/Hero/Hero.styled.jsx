@@ -8,8 +8,8 @@ export const Section = styled.section`
   background-size: center;
   background-repeat: no-repeat;
 
-  box-shadow: inset 0px 0px 200px calc(100vw) rgba(146, 146, 146, 0.3);
-  -webkit-box-shadow: inset 0px 0px 200px calc(100vw) rgba(146, 146, 146, 0.3);
+  box-shadow: inset 0px 0px 200px calc(100vw) ${colors.tintShadow};
+  -webkit-box-shadow: inset 0px 0px 200px calc(100vw) ${colors.tintShadow};
 `;
 
 export const Container = styled.div`
@@ -37,16 +37,4 @@ export const Text = styled.p`
   font-weight: 700;
   max-width: 360px;
   line-height: 20px;
-`;
-
-export const Button = styled.button`
-  cursor: pointer;
-  border-radius: 20px;
-  border: none;
-  background-color: ${colors.mainAccent};
-  width: 128px;
-  height: 36px;
-  text-transform: capitalize;
-  font-size: 12px;
-  font-weight: 700;
 `;
