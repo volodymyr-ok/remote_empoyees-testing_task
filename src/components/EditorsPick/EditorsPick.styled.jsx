@@ -5,8 +5,10 @@ export const Section = styled.section`
   /* min-height: 100vh; */
   padding: 70px 0;
   positon: relative;
-  z-index: 1;
-  box-shadow: 0px 0px 100px 100px ${colors.background};
+  z-index: 10;
+  /* box-shadow: 0px 100px 100px 100px ${colors.background}; */
+
+  /* box-shadow: 0px 20vh 100px 100px navy; */
 `;
 
 export const Container = styled.div`
