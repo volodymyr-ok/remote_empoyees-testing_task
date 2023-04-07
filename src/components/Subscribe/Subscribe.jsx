@@ -17,17 +17,17 @@ const Subscribe = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({ email }).toString(),
-    })
-      .then(() => {
-        //   setTimeout(openSuccessModal, 700);
-        //   setTimeout(closeSuccessModal, 3000);
-        console.log('Email sent');
-      })
-      .catch(error => console.log('Sending email failed'));
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: new URLSearchParams({ email }).toString(),
+    // })
+    //   .then(() => {
+    //     //   setTimeout(openSuccessModal, 700);
+    //     //   setTimeout(closeSuccessModal, 3000);
+    //     console.log('Email sent');
+    //   })
+    //   .catch(error => console.log('Sending email failed'));
 
     setEmail('');
   };
@@ -37,7 +37,15 @@ const Subscribe = () => {
       <Container>
         <Title>Subscribe to our news letter</Title>
 
-        <Form name="subscription" method="POST" data-netlify="true" onSubmit={handleSubmit}>
+        <Form
+          name="subscription"
+          method="POST"
+          data-netlify="true"
+          onSubmit="submit"
+          //   onSubmit={handleSubmit}
+        >
+          <input type="hidden" name="form-name" value="subscription" />
+
           <InputWrap>
             <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
 
@@ -46,7 +54,9 @@ const Subscribe = () => {
             </Label>
           </InputWrap>
 
-          <Button type="submit">Subscribe</Button>
+          <Button onClick={handleSubmit} type="submit">
+            Subscribe
+          </Button>
         </Form>
       </Container>
     </Section>
