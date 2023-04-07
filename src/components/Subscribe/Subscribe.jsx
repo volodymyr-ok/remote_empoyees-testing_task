@@ -3,7 +3,7 @@ import {
   Container,
   Section,
   Button,
-  Form,
+  //   Form,
   Title,
   Input,
   Label,
@@ -17,17 +17,16 @@ const Subscribe = () => {
   const handleSubmit = event => {
     event.preventDefault();
 
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: new URLSearchParams({ email }).toString(),
-    // })
-    //   .then(() => {
-    //     //   setTimeout(openSuccessModal, 700);
-    //     //   setTimeout(closeSuccessModal, 3000);
-    //     console.log('Email sent');
-    //   })
-    //   .catch(error => console.log('Sending email failed'));
+    const myForm = event.target;
+    const formData = new FormData(myForm);
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => console.log('Form successfully submitted'))
+      .catch(error => alert(error));
 
     setEmail('');
   };
@@ -37,29 +36,21 @@ const Subscribe = () => {
       <Container>
         <Title>Subscribe to our news letter</Title>
 
-        <Form
-          name="subscription"
-          //   method="POST"
-          netlify
-          //   data-netlify="true"
-          //   onSubmit="submit"
-          //   netlify-honeypot="bot-field"
-          //   onSubmit={handleSubmit}
-        >
+        <form data-netlify="true" name="subscription" method="post" onSubmit={handleSubmit}>
           <input type="hidden" name="form-name" value="subscription" />
 
-          <InputWrap>
-            <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
+          {/* <InputWrap> */}
+          <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
 
-            <Label isTransparent={!!email} htmlFor="email">
-              Your Email
-            </Label>
-          </InputWrap>
+          <Label isTransparent={!!email} htmlFor="email">
+            Your Email
+          </Label>
+          {/* </InputWrap> */}
 
           <Button onClick={handleSubmit} type="submit">
             Subscribe
           </Button>
-        </Form>
+        </form>
       </Container>
     </Section>
   );
