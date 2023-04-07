@@ -7,7 +7,7 @@ import {
   Title,
   Input,
   Label,
-  InputWrap,
+  //   InputWrap,
 } from './Subscribe.styled';
 
 const Subscribe = () => {
