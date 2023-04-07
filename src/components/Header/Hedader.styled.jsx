@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { colors } from '../../utils/repeatStyles';
+import { Link } from 'react-router-dom';
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -40,7 +41,7 @@ export const List = styled.ul`
   gap: 48px;
 `;
 
-export const Link = styled.a`
+export const NavLink = styled(Link)`
   font-size: 12px;
   font-weight: 700;
 `;

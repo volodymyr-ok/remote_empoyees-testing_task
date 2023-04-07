@@ -1,54 +1,12 @@
 import React from 'react';
-import {
-  Aside,
-  Button,
-  Container,
-  Item,
-  List,
-  MainContent,
-  Section,
-  Text,
-  Title,
-} from './Hero.styled';
+import { Button, Container, MainContent, Section, Text, Title } from './Hero.styled';
+import AsideNav from '../AsideNav/AsideNav';
 
 const Hero = () => {
-  const navLinks = [
-    {
-      name: 'Home',
-      link: '#',
-    },
-    {
-      name: 'Recommendation',
-      link: '#',
-    },
-    {
-      name: 'Explore',
-      link: '#',
-    },
-    {
-      name: 'Help',
-      link: '#',
-    },
-    {
-      name: 'About Us',
-      link: '#',
-    },
-  ];
-
   return (
     <Section>
       <Container>
-        <Aside>
-          <List>
-            {navLinks.map(({ name, link }) => (
-              <Item>
-                <a className="active" href={link} target="_blank" rel="noreferrer noopener">
-                  {name}
-                </a>
-              </Item>
-            ))}
-          </List>
-        </Aside>
+        <AsideNav />
 
         <MainContent>
           <Title>The Walchen Lake</Title>

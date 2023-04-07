@@ -19,36 +19,6 @@ export const Container = styled.div`
   display: flex;
 `;
 
-export const Aside = styled.div`
-  background-color: ${colors.backdrop};
-  height: calc(120vh - 90px);
-  width: 270px;
-  padding-top: calc(80px);
-  padding-left: 56px;
-`;
-
-export const List = styled.ul`
-  position: relative;
-`;
-
-export const Item = styled.li`
-  display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  font-weight: 700;
-  color: ${colors.notActive};
-
-  :first-child:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    width: 90px;
-    height: 1px;
-    background-color: white;
-    color: white;
-  }
-`;
-
 export const MainContent = styled.div`
   display: flex;
   flex-direction: column;

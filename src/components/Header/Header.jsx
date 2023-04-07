@@ -1,6 +1,14 @@
 import React from 'react';
 
-import { Avatar, Item, Link, List, LogoWrapper, NavWrapper, StyledHeader } from './Hedader.styled';
+import {
+  Avatar,
+  Item,
+  NavLink,
+  List,
+  LogoWrapper,
+  NavWrapper,
+  StyledHeader,
+} from './Hedader.styled';
 import Logo from '../Logo/Logo';
 
 const Header = () => {
@@ -13,15 +21,11 @@ const Header = () => {
       <NavWrapper>
         <List>
           <Item>
-            <Link href={'./'} target="_blank" rel="noreferrer noopener">
-              My Collection
-            </Link>
+            <NavLink to={'./'}>My Collection</NavLink>
           </Item>
 
           <Item>
-            <Link href={'./'} target="_blank" rel="noreferrer noopener">
-              Galih Pambudi
-            </Link>
+            <NavLink to={'./'}>Galih Pambudi</NavLink>
           </Item>
         </List>
 
