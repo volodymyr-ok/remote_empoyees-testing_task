@@ -17,6 +17,7 @@ import {
   Title,
 } from './OutdoorsEdition.styled';
 import PaginationBar from '../PaginationBar/PaginationBar';
+import PaginationInfo from '../PaginationInfo/PganationInfo';
 
 const cardList = [
   {
@@ -269,6 +270,8 @@ const OutdoorsEdition = () => {
             ))}
           </List>
         </Container>
+
+        <PaginationInfo info={info} sectionName="Outdoors Edition" />
       </Section>
     </>
   );

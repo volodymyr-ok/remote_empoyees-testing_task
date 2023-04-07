@@ -3,10 +3,6 @@ import { colors } from '../../utils/repeatStyles';
 
 export const Container = styled.div`
   position: absolute;
-  /* top: 0; */
-  /* left: 0; */
-  /* width: 100%; */
-
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -18,16 +14,7 @@ export const Container = styled.div`
 
 export const BarWrapper = styled.div`
   display: flex;
-  /* justify-content: flex-start; */
   gap: 12px;
-`;
-
-export const NumBar = styled.ul`
-  height: 30px;
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  justify-content: center;
 `;
 
 export const ArrowBtn = styled.button`
@@ -42,25 +29,11 @@ export const ArrowBtn = styled.button`
   background-color: ${colors.mainText};
   border-color: transparent;
   border-radius: 50%;
-  :hover,
-  :focus {
-    /* fill: ${colors.accentOrange}; */
-    svg {
-      /* stroke: ${colors.darkOrange}; */
-      fill: ${colors.white};
-    }
+  :not(:disabled):hover {
+    background-color: ${colors.mainAccent};
   }
   :disabled {
     cursor: not-allowed;
-    svg {
-      /* stroke: ${colors.accentOrange}; */
-    }
-    :hover,
-    :focus {
-      svg {
-        /* fill: transparent; */
-      }
-    }
   }
 `;
 
@@ -84,7 +57,7 @@ export const FirstDivision = styled.div`
 
   width: 570px;
   height: 1px;
-  background-color: ${colors.mainText};
+  background-color: ${colors.notActive};
 `;
 
 export const PageDescr = styled(SectionDescr)`
