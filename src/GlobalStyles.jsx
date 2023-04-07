@@ -6,6 +6,7 @@ export const GlobalStyles = createGlobalStyle`
 *::before,
 *::after {
   box-sizing: border-box;
+  transition: all 0.12s linear;
 }
 html {
  height : 100%;

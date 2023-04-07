@@ -3,31 +3,18 @@ import {
   Container,
   Section,
   Button,
-  //   Form,
+  Form,
   Title,
   Input,
   Label,
-  //   InputWrap,
+  InputWrap,
 } from './Subscribe.styled';
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
   const handleChange = ({ target: { value } }) => setEmail(value);
-
   const handleSubmit = event => {
     event.preventDefault();
-
-    const myForm = event.target;
-    const formData = new FormData(myForm);
-
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(formData).toString(),
-    })
-      .then(() => console.log('Form successfully submitted'))
-      .catch(error => alert(error));
-
     setEmail('');
   };
 
@@ -36,21 +23,17 @@ const Subscribe = () => {
       <Container>
         <Title>Subscribe to our news letter</Title>
 
-        <form data-netlify="true" name="subscription" method="post" onSubmit={handleSubmit}>
-          <input type="hidden" name="form-name" value="subscription" />
+        <Form onSubmit={handleSubmit}>
+          <InputWrap>
+            <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
 
-          {/* <InputWrap> */}
-          <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
+            <Label isTransparent={!!email} htmlFor="email">
+              Your Email
+            </Label>
+          </InputWrap>
 
-          <Label isTransparent={!!email} htmlFor="email">
-            Your Email
-          </Label>
-          {/* </InputWrap> */}
-
-          <Button onClick={handleSubmit} type="submit">
-            Subscribe
-          </Button>
-        </form>
+          <Button type="submit">Subscribe</Button>
+        </Form>
       </Container>
     </Section>
   );

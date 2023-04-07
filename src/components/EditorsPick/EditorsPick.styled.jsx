@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { colors } from '../../utils/repeatStyles';
 
 export const Section = styled.section`
-  min-height: 100vh;
+  /* min-height: 100vh; */
+  padding: 70px 0;
   positon: relative;
   z-index: 1;
-  box-shadow: 0px calc(-100vh + 90vh) 100px 100px ${colors.background};
+  box-shadow: 0px 0px 100px 100px ${colors.background};
 `;
 
 export const Container = styled.div`
@@ -25,7 +26,7 @@ export const Aside = styled.aside`
   padding-top: 84px;
 `;
 
-export const MainTitle = styled.h2`
+export const AsideTitle = styled.h2`
   font-size: 24px;
   font-weight: 700;
   text-transform: capitalize;
@@ -36,7 +37,7 @@ export const MainTitle = styled.h2`
   margin-bottom: 18px;
 `;
 
-export const MainDescr = styled.p`
+export const AsideDescr = styled.p`
   font-size: 12px;
   font-weight: 700;
   text-align: end;
@@ -71,58 +72,82 @@ export const MainLink = styled.a`
 `;
 
 export const List = styled.ul`
-  padding-top: 148px;
+  max-width: 932px;
+  max-height: 932px;
 
-  display: flex;
-  gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 64px;
+  grid-row-gap: 64px;
 `;
 
 export const Item = styled.li`
-  width: 270px;
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  background-color: ${colors.minorText};
+
+  :nth-child(1) {
+    grid-area: 1 / 1 / 3 / 3;
+  }
+  :nth-child(2) {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  :nth-child(3) {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  :nth-child(4) {
+    grid-area: 3 / 1 / 4 / 2;
+  }
+  :nth-child(5) {
+    grid-area: 3 / 2 / 4 / 4;
+  }
+
+  :not(:nth-child(1)) {
+    div {
+      background-color: transparent;
+      color: transparent;
+      h4,
+      p {
+        color: transparent;
+      }
+    }
+  }
 `;
 
-export const CardWrap = styled.div``;
+export const DescrWrap = styled.div`
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
 
-export const ImageWrap = styled.div`
-  width: 270px;
-  height: 270px;
-  margin-bottom: 24px;
-  background-color: ${colors.minorText};
+  height: 168px;
+  width: 600px;
+  padding: 24px 32px;
+
+  background-color: rgba(50, 50, 50, 0.46);
   overflow: hidden;
 `;
+
 export const Image = styled.img`
-  width: 270px;
-  height: 270px;
+  height: 100%;
   object-fit: cover;
 `;
 
 export const Title = styled.h3`
   font-size: 24px;
-  font-weight: 600;
   margin-bottom: 4px;
 `;
+
 export const SubTitle = styled.h4`
-  color: ${colors.subTitle};
-  margin-bottom: 24px;
+  color: ${colors.locationText};
+  font-size: 18px;
+  margin-bottom: 20px;
 `;
+
 export const Description = styled.p`
   color: ${colors.descrText};
   font-size: 11px;
   font-weight: 500;
   line-height: 18px;
-`;
-export const Link = styled.a`
-  text-transform: lowercase;
-  font-size: 11px;
-  font-weight: 500;
-  color: ${colors.mainAccent};
-
-  :hover,
-  :focus {
-    color: ${colors.hoveredAccent};
-  }
 `;

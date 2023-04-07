@@ -21,8 +21,13 @@ export const Item = styled.li`
   color: ${colors.notActive};
   text-transform: capitalize;
 
+  :hover,
+  :focus {
+    color: ${colors.mainText};
+  }
+
   .active {
-    color: white;
+    color: ${colors.mainText};
 
     :after {
       content: '';
@@ -31,7 +36,7 @@ export const Item = styled.li`
       transform: translateY(8px);
       width: 90px;
       height: 1px;
-      background-color: white;
+      background-color: ${colors.mainText};
     }
   }
 `;

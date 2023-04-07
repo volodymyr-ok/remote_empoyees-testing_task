@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Aside,
-  Button,
+  Link,
   CardWrap,
   Container,
   Description,
@@ -78,9 +78,9 @@ const OutdoorsEdition = () => {
                   <Description>{description}</Description>
                 </CardWrap>
 
-                <Button href={uri} target="_blank" rel="noreferrer noopener">
+                <Link href={uri} target="_blank" rel="noreferrer noopener">
                   Read more
-                </Button>
+                </Link>
               </Item>
             ))}
           </List>

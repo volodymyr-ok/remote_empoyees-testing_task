@@ -3,8 +3,6 @@ import { colors } from '../../utils/repeatStyles';
 import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
 import { RiFacebookFill } from 'react-icons/ri';
 
-// outline: 1px solid red;
-
 export const FooterSection = styled.footer`
   height: 90px;
   background-color: ${colors.mainAccent};
@@ -38,6 +36,11 @@ export const Item = styled.li`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  :hover,
+  :focus {
+    transform: scale(1.5);
+  }
 `;
 
 export const Link = styled.a`

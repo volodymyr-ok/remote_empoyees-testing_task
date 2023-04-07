@@ -12,6 +12,11 @@ export const StyledButton = styled.button`
   text-transform: capitalize;
   font-size: 12px;
   font-weight: 600;
+
+  :hover,
+  :focus {
+    background-color: ${colors.hoveredAccent};
+  }
 `;
 
 const BtnReadMore = () => {
