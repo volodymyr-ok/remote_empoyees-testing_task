@@ -20,6 +20,7 @@ import {
 const OutdoorsEdition = () => {
   const cardList = [
     {
+      uri: 'https://en.wikipedia.org/wiki/Ollantaytambo',
       place: 'Ollantaytambo',
       location: 'Peru',
       description:
@@ -27,6 +28,7 @@ const OutdoorsEdition = () => {
       imageURI: require('../../assets/img/ollantaytambo.jpg'),
     },
     {
+      uri: 'https://en.wikipedia.org/wiki/Antelope_Canyon',
       place: 'Antelope Canyon',
       location: 'USA',
       description:
@@ -34,6 +36,7 @@ const OutdoorsEdition = () => {
       imageURI: require('../../assets/img/antelope_canyon-Main.jpg'),
     },
     {
+      uri: 'https://en.wikipedia.org/wiki/Lake_Louise,_Alberta',
       place: 'Lake Louise',
       location: 'Canada',
       description:
@@ -51,13 +54,17 @@ const OutdoorsEdition = () => {
 
             <MainDescr>Some of featured spot that you might want visit before you die</MainDescr>
 
-            <MainLink href={'./'} target="_blank" rel="noreferrer noopener">
+            <MainLink
+              href={'https://en.wikipedia.org/wiki/Main_Page'}
+              target="_blank"
+              rel="noreferrer noopener"
+            >
               View all
             </MainLink>
           </Aside>
 
           <List>
-            {cardList.map(({ imageURI, place, location, description }) => (
+            {cardList.map(({ uri, imageURI, place, location, description }) => (
               <Item>
                 <CardWrap>
                   <ImageWrap>
@@ -71,7 +78,9 @@ const OutdoorsEdition = () => {
                   <Description>{description}</Description>
                 </CardWrap>
 
-                <Button>Read more</Button>
+                <Button href={uri} target="_blank" rel="noreferrer noopener">
+                  Read more
+                </Button>
               </Item>
             ))}
           </List>

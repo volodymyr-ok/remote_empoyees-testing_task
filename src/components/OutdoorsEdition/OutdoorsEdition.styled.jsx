@@ -112,15 +112,15 @@ export const Description = styled.p`
   font-weight: 500;
   line-height: 18px;
 `;
-export const Button = styled.button`
+export const Button = styled.a`
   text-transform: lowercase;
   font-size: 11px;
   font-weight: 500;
   color: ${colors.mainAccent};
-  background-color: transparent;
-  border: none;
-  text-align: start;
-  cursor: pointer;
+  /* background-color: transparent;
+  border: none; */
+  /* text-align: start; */
+  /* cursor: pointer;
   margin: 0;
-  padding: 0;
+  padding: 0; */
 `;

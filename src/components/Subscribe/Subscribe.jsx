@@ -1,30 +1,36 @@
 import React, { useState } from 'react';
-import { Container, Section, Button, Form, Title, Background } from './Subscribe.styled';
-
-// import { ReactComponent as DottedWorldMap } from '../../assets/svg/world-map-dots.svg';
+import {
+  Container,
+  Section,
+  Button,
+  Form,
+  Title,
+  Input,
+  Label,
+  InputWrap,
+} from './Subscribe.styled';
 
 const Subscribe = () => {
   const [email, setEmail] = useState('');
-  const handleChange = e => {
-    e.preventDefault();
-    const { value } = e.target;
-    setEmail(value);
+  const handleChange = ({ target: { value } }) => setEmail(value);
+  const handleSubmit = event => {
+    event.preventDefault();
+    setEmail('');
   };
 
   return (
     <Section>
-      <Background />
       <Container>
         <Title>Subscribe to our news letter</Title>
 
-        <Form>
-          <input
-            type="email"
-            name="email"
-            placeholder="Your email"
-            value={email}
-            onChange={handleChange}
-          />
+        <Form onSubmit={handleSubmit}>
+          <InputWrap>
+            <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
+
+            <Label isTransparent={!!email} htmlFor="email">
+              Your Email
+            </Label>
+          </InputWrap>
 
           <Button type="submit">Subscribe</Button>
         </Form>
