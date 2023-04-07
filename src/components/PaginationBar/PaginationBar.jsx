@@ -35,16 +35,6 @@ const PaginationBar = ({ info: { currentPage, pagesCount }, setPage, sectionName
           <ArrowBtn type="button" disabled={isPrevBtnDisabled} onClick={toPrevPage}>
             <FaChevronLeft />
           </ArrowBtn>
-
-          {/* <NumBar>
-            {renderButtons().map(el => (
-              <li key={'buttonId' + el}>
-                <NumBtn type="button" active={turnToActive(el)} onClick={changePage}>
-                  {el}
-                </NumBtn>
-              </li>
-            ))}
-          </NumBar> */}
           <ArrowBtn type="button" disabled={isNextBtnDisabled} onClick={toNextPage}>
             <FaChevronRight />
           </ArrowBtn>
