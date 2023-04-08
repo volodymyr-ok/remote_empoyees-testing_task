@@ -3,7 +3,7 @@ import React from 'react';
 import {
   Container,
   SectionDescr,
-  PaginationDetails,
+  DetailsWrapper,
   FirstDivision,
   PageDescr,
   SecondDivision,
@@ -12,7 +12,7 @@ import {
 const PaginationInfo = ({ info: { currentPage, pagesCount }, sectionName }) => {
   return (
     <Container>
-      <PaginationDetails>
+      <DetailsWrapper>
         <SectionDescr>{sectionName}</SectionDescr>
 
         <FirstDivision />
@@ -20,7 +20,7 @@ const PaginationInfo = ({ info: { currentPage, pagesCount }, sectionName }) => {
         <PageDescr>{`${currentPage} / ${pagesCount}`}</PageDescr>
 
         <SecondDivision />
-      </PaginationDetails>
+      </DetailsWrapper>
     </Container>
   );
 };

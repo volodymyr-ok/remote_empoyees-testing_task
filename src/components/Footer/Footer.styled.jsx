@@ -1,35 +1,49 @@
 import styled from 'styled-components';
-import { colors } from '../../utils/repeatStyles';
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai';
-import { RiFacebookFill } from 'react-icons/ri';
+import { colors, device } from '../../utils/styles';
 
 export const FooterSection = styled.footer`
+  padding: 0 20px;
   height: 90px;
   background-color: ${colors.mainAccent};
   display: flex;
   align-items: center;
   color: ${colors.minorText};
+  ${device.wide} {
+    padding: 0 118px 0 56px;
+  }
 `;
 
 export const Container = styled.div`
-  margin-left: 56px;
-  margin-right: 118px;
-
   display: flex;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  ${device.wide} {
+  }
+`;
+
+export const LogoWrapper = styled.div`
+  display: inline-block;
+  width: 94px;
+
+  ${device.wide} {
+    width: 156px;
+  }
 `;
 
 export const Copyright = styled.p`
   font-size: 12px;
   font-weight: 900;
+  ${device.wide} {
+  }
 `;
 
 export const List = styled.ul`
   display: flex;
   gap: 20px;
   align-items: center;
+  ${device.wide} {
+  }
 `;
 
 export const Item = styled.li`
@@ -47,14 +61,6 @@ export const Link = styled.a`
   display: inline-flex;
   justify-content: center;
   align-items: center;
-`;
 
-export const IconInsta = styled(AiOutlineInstagram)`
-  color: ${colors.minorText};
-`;
-export const IconFace = styled(RiFacebookFill)`
-  color: ${colors.minorText};
-`;
-export const IconTwit = styled(AiOutlineTwitter)`
   color: ${colors.minorText};
 `;

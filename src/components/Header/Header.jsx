@@ -9,6 +9,7 @@ import {
   NavWrapper,
   StyledHeader,
 } from './Hedader.styled';
+import { HiUser } from 'react-icons/hi';
 import Logo from '../Logo/Logo';
 
 const Header = () => {
@@ -29,7 +30,9 @@ const Header = () => {
           </Item>
         </List>
 
-        <Avatar></Avatar>
+        <Avatar>
+          <HiUser size={20} />
+        </Avatar>
       </NavWrapper>
     </StyledHeader>
   );

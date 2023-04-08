@@ -13,3 +13,9 @@ export const colors = {
   backdrop: 'rgba(40, 39, 42, 0.5)',
   tintShadow: 'rgba(146, 146, 146, 0.3)',
 };
+
+export const device = {
+  limited: `@media screen and (min-width: 490px) and (max-width: 1439px)`,
+  narrow: `@media screen and (max-width: 1439px)`,
+  wide: `@media screen and (min-width: 1440px)`,
+};

@@ -1,14 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../utils/repeatStyles';
+import { colors } from '../../utils/styles';
 import { Link } from 'react-router-dom';
 
 const LogoLink = styled(Link)`
-  position: relative;
-
   font-size: 24px;
   font-weight: bold;
+  position: relative;
   color: ${colors.minorText};
+
   :after {
     position: absolute;
     bottom: 5px;
@@ -19,7 +19,6 @@ const LogoLink = styled(Link)`
     width: 18px;
     height: 2px;
     background-color: ${colors.minorText};
-    /* margin-top: 10px; */
   }
 `;
 

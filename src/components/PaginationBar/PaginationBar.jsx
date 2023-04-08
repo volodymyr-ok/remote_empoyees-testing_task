@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 
 import {
   Container,
-  BarWrapper,
+  BtnsWrapper,
   ArrowBtn,
   SectionDescr,
-  PaginationDetails,
+  DetailsWrapper,
   FirstDivision,
   PageDescr,
   SecondDivision,
@@ -31,7 +31,7 @@ const PaginationBar = ({ info: { currentPage, pagesCount }, setPage, sectionName
   return (
     pagesCount > 1 && (
       <Container>
-        <BarWrapper>
+        <BtnsWrapper>
           <ArrowBtn type="button" disabled={isPrevBtnDisabled} onClick={toPrevPage}>
             <FaChevronLeft />
           </ArrowBtn>
@@ -39,9 +39,9 @@ const PaginationBar = ({ info: { currentPage, pagesCount }, setPage, sectionName
           <ArrowBtn type="button" disabled={isNextBtnDisabled} onClick={toNextPage}>
             <FaChevronRight />
           </ArrowBtn>
-        </BarWrapper>
+        </BtnsWrapper>
 
-        <PaginationDetails>
+        <DetailsWrapper>
           <SectionDescr>{sectionName}</SectionDescr>
 
           <FirstDivision />
@@ -49,7 +49,7 @@ const PaginationBar = ({ info: { currentPage, pagesCount }, setPage, sectionName
           <PageDescr>{`${currentPage} / ${pagesCount}`}</PageDescr>
 
           <SecondDivision />
-        </PaginationDetails>
+        </DetailsWrapper>
       </Container>
     )
   );

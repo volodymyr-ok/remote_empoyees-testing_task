@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors } from '../../utils/repeatStyles';
+import { colors, device } from '../../utils/styles';
 
 export const StyledButton = styled.button`
   cursor: pointer;
@@ -16,6 +16,8 @@ export const StyledButton = styled.button`
   :hover,
   :focus {
     background-color: ${colors.hoveredAccent};
+  }
+  ${device.wide} {
   }
 `;
 

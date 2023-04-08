@@ -1,18 +1,21 @@
 import styled from 'styled-components';
-import { colors } from '../../utils/repeatStyles';
+import { colors, device } from '../../utils/styles';
 
 export const Container = styled.div`
-  position: absolute;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-
-  padding-left: calc(270px + 118px);
-  padding-right: 118px;
   transform: translateY(-300%);
+
+  ${device.wide} {
+    position: absolute;
+    justify-content: flex-start;
+
+    padding-left: calc(270px + 118px);
+    padding-right: 118px;
+  }
 `;
 
-export const BarWrapper = styled.div`
+export const BtnsWrapper = styled.div`
   display: flex;
   gap: 12px;
 `;
@@ -37,33 +40,57 @@ export const ArrowBtn = styled.button`
   }
 `;
 
-export const PaginationDetails = styled.div`
+export const DetailsWrapper = styled.div`
   display: flex;
-  width: 100%;
-  justify-content: space-between;
   align-items: center;
+  width: 100%;
+
+  ${device.narrow} {
+    gap: 12px;
+    margin-left: 12px;
+    line-height: 18px;
+  }
+
+  ${device.wide} {
+    margin-left: 20px;
+
+    justify-content: space-between;
+  }
 `;
 
 export const SectionDescr = styled.p`
-  min-width: 108px;
-
-  margin-left: 20px;
   font-size: 12px;
   font-weight: 700;
+
+  ${device.limited} {
+    min-width: 108px;
+  }
+
+  ${device.wide} {
+    min-width: 108px;
+  }
 `;
 
 export const FirstDivision = styled.div`
-  margin-left: 30px;
-
-  width: 570px;
+  width: 100%;
   height: 1px;
   background-color: ${colors.notActive};
+
+  ${device.wide} {
+    margin-left: 30px;
+    width: 570px;
+    height: 1px;
+    background-color: ${colors.notActive};
+  }
 `;
 
 export const PageDescr = styled(SectionDescr)`
-  margin-left: 30px;
   min-width: 32px;
   text-align: center;
+
+  ${device.wide} {
+    margin-left: 30px;
+  }
 `;
 
 export const SecondDivision = styled(FirstDivision)`

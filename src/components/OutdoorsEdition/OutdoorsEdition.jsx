@@ -17,7 +17,7 @@ import {
   Title,
 } from './OutdoorsEdition.styled';
 import PaginationBar from '../PaginationBar/PaginationBar';
-import PaginationInfo from '../PaginationInfo/PganationInfo';
+import PaginationInfo from '../PaginationInfo/PaginationInfo';
 
 const cardList = [
   {
