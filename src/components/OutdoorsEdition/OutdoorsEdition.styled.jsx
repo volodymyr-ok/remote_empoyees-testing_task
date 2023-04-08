@@ -3,6 +3,7 @@ import { colors, device } from '../../utils/styles';
 
 export const Section = styled.section`
   box-shadow: 0px calc(-100vh + 90vh) 100px 100px ${colors.background};
+
   ${device.narrow} {
     padding-bottom: 60px;
   }
@@ -114,26 +115,36 @@ export const List = styled.ul`
 `;
 
 export const Item = styled.li`
-  width: 270px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 480px;
+
   ${device.narrow} {
+    flex-basis: 45%;
+    min-width: 270px;
+
     gap: 12px;
+  }
+
+  ${device.wide} {
+    width: 270px;
   }
 `;
 
 export const CardWrap = styled.div``;
 
 export const ImageWrap = styled.div`
-  width: 270px;
+  width: 100%;
   height: 270px;
   margin-bottom: 24px;
   background-color: ${colors.minorText};
   /* ${device.wide} {
     overflow: hidden;
   } */
+  ${device.wide} {
+    width: 270px;
+  }
 `;
 
 export const Image = styled.img`
