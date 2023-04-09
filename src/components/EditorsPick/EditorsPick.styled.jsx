@@ -9,7 +9,6 @@ export const Section = styled.section`
 
   ${device.wide} {
     padding: 70px 0;
-    /* box-shadow: 0px 100px 100px 100px ${colors.background}; */
   }
 `;
 
@@ -30,7 +29,7 @@ export const Aside = styled.aside`
     width: 270px;
     min-height: 100%;
 
-    padding-top: 84px;
+    padding-top: 20px;
   }
 `;
 
@@ -64,30 +63,11 @@ export const AsideDescr = styled.p`
   }
 `;
 
-// export const MainLink = styled.a`
-//   ${device.wide} {
-//     font-size: 12px;
-//     font-weight: 700;
-//     text-align: end;
-//     line-height: 18px;
-//     margin-top: 118px;
-//     display: flex;
-//     align-items: center;
-//     gap: 20px;
-//     :hover,
-//     :focus {
-//       color: ${colors.hoveredAccent};
-//     }
-//     :before {
-//       content: '';
-//       display: inline-block;
-//       right: 0;
-//       width: 90px;
-//       height: 1px;
-//       background-color: white;
-//     }
-//   }
-// `;
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+`;
 
 export const List = styled.ul`
   display: grid;
@@ -114,6 +94,13 @@ export const Item = styled.li`
   position: relative;
   overflow: hidden;
   background-color: ${colors.minorText};
+
+  cursor: pointer;
+
+  :hover,
+  :focus {
+    transform: scale(1.1);
+  }
 
   :not(:nth-child(1)) {
     div {

@@ -33,8 +33,9 @@ export const LogoWrapper = styled.div`
 
 export const Copyright = styled.p`
   font-size: 12px;
-  font-weight: 900;
+  font-weight: 700;
   ${device.wide} {
+    font-weight: 900;
   }
 `;
 

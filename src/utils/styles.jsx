@@ -11,6 +11,7 @@ export const colors = {
   notActive: '#727272',
   avaBg: '#000000',
   backdrop: 'rgba(40, 39, 42, 0.5)',
+  backdropModal: 'rgba(0, 0, 0, 0.2)',
   tintShadow: 'rgba(146, 146, 146, 0.3)',
 };
 

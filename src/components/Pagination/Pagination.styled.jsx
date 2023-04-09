@@ -4,20 +4,24 @@ import { colors, device } from '../../utils/styles';
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  transform: translateY(-300%);
+  height: 36px;
+  transform: translateY(${({ needToPosition }) => (needToPosition ? '-600%' : 0)});
 
   ${device.wide} {
-    position: absolute;
+    position: ${({ needToPosition }) => (needToPosition ? 'absolute' : 'static')};
+    min-width: 930px;
     justify-content: flex-start;
-
-    padding-left: calc(270px + 118px);
-    padding-right: 118px;
+    transform: translateY(${({ needToPosition }) => (needToPosition ? '-300%' : 0)});
   }
 `;
 
 export const BtnsWrapper = styled.div`
   display: flex;
   gap: 12px;
+
+  ${device.wide} {
+    margin-right: 20px;
+  }
 `;
 
 export const ArrowBtn = styled.button`
@@ -32,6 +36,7 @@ export const ArrowBtn = styled.button`
   background-color: ${colors.mainText};
   border-color: transparent;
   border-radius: 50%;
+
   :not(:disabled):hover {
     background-color: ${colors.mainAccent};
   }
@@ -52,8 +57,6 @@ export const DetailsWrapper = styled.div`
   }
 
   ${device.wide} {
-    margin-left: 20px;
-
     justify-content: space-between;
   }
 `;
@@ -75,10 +78,11 @@ export const FirstDivision = styled.div`
   width: 100%;
   height: 1px;
   background-color: ${colors.notActive};
+  border-radius: 50px;
 
   ${device.wide} {
     margin-left: 30px;
-    width: 570px;
+    width: 100%;
     height: 1px;
     background-color: ${colors.notActive};
   }
@@ -95,4 +99,40 @@ export const PageDescr = styled(SectionDescr)`
 
 export const SecondDivision = styled(FirstDivision)`
   width: 26px;
+
+  ${device.wide} {
+    width: 40px;
+  }
+`;
+
+export const SelectorWrapper = styled.div`
+  display: flex;
+  gap: 30px;
+`;
+
+export const Selector = styled.select`
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  cursor: pointer;
+  line-height: inherit;
+
+  ${device.wide} {
+    margin-left: 30px;
+  }
+`;
+
+export const Option = styled.option`
+  appearance: none;
+  background-color: ${colors.background};
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: ${colors.mainText};
+  cursor: pointer;
+  line-height: inherit;
 `;

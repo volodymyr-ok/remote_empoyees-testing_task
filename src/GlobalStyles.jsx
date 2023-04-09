@@ -20,7 +20,9 @@ body {
   padding: 0;
   min-width: 320px;
   height: 100%;
- 
+  
+ &.no-scroll {
+  overflow: hidden;}
 }
 h1,
 h2,

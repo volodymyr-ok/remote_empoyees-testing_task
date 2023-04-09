@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { colors, device } from '../../utils/styles';
+import { colors } from '../../utils/styles';
 
 export const StyledButton = styled.button`
   cursor: pointer;
@@ -17,12 +17,10 @@ export const StyledButton = styled.button`
   :focus {
     background-color: ${colors.hoveredAccent};
   }
-  ${device.wide} {
-  }
 `;
 
-const BtnReadMore = () => {
-  return <StyledButton>Read more</StyledButton>;
+const BtnReadMore = ({ toggleModal }) => {
+  return <StyledButton onClick={() => toggleModal()}>Read more</StyledButton>;
 };
 
 export default BtnReadMore;

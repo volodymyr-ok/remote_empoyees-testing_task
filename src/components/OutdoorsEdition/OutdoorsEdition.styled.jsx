@@ -100,6 +100,12 @@ export const MainLink = styled.a`
   }
 `;
 
+export const ContentWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+`;
+
 export const List = styled.ul`
   display: flex;
   gap: 60px;

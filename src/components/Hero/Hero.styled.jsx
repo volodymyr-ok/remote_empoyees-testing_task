@@ -1,7 +1,5 @@
 import styled from 'styled-components';
 import { colors, device } from '../../utils/styles';
-const mainBG = require('../../assets/img/mainBg.jpg');
-const mainBgMobile = require('../../assets/img/mainBgMobile.jpg');
 
 export const Section = styled.section`
   min-height: 120vh;
@@ -11,11 +9,11 @@ export const Section = styled.section`
   -webkit-box-shadow: inset 0px 0px 200px 100vw ${colors.tintShadow};
 
   ${device.narrow} {
-    background-image: url(${mainBgMobile});
+    background-image: url(${({ bg }) => bg.lakeImgNarrow});
   }
 
   ${device.wide} {
-    background-image: url(${mainBG});
+    background-image: url(${({ bg }) => bg.lakeImgWide});
   }
 `;
 

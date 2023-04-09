@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Notify } from 'notiflix/build/notiflix-notify-aio';
+
 import {
   Container,
   Section,
@@ -15,27 +17,32 @@ const Subscribe = () => {
   const handleChange = ({ target: { value } }) => setEmail(value);
   const handleSubmit = event => {
     event.preventDefault();
+    Notify.success('Thank you for subscribing!');
     setEmail('');
   };
 
   return (
-    <Section>
-      <Container>
-        <Title>Subscribe to our news letter</Title>
+    <>
+      <Section>
+        <Container>
+          <Title>Subscribe to our newsletter</Title>
 
-        <Form onSubmit={handleSubmit}>
-          <InputWrap>
-            <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
+          <Form onSubmit={handleSubmit}>
+            <InputWrap>
+              <Input type="email" name="email" id="email" value={email} onChange={handleChange} />
 
-            <Label isTransparent={!!email} htmlFor="email">
-              Your Email
-            </Label>
-          </InputWrap>
+              <Label isTransparent={!!email} htmlFor="email">
+                Your Email
+              </Label>
+            </InputWrap>
 
-          <Button type="submit">Subscribe</Button>
-        </Form>
-      </Container>
-    </Section>
+            <Button disabled={email ? false : true} type="submit">
+              Subscribe
+            </Button>
+          </Form>
+        </Container>
+      </Section>
+    </>
   );
 };
 

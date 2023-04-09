@@ -88,4 +88,9 @@ export const Input = styled.input`
 
 export const Button = styled(StyledButton)`
   font-weight: 700;
+  :disabled:hover,
+  :disabled:focus {
+    background-color: ${colors.mainAccent};
+    cursor: not-allowed;
+  }
 `;

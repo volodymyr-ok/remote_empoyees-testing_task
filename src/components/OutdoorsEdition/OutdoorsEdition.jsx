@@ -15,9 +15,9 @@ import {
   Section,
   SubTitle,
   Title,
+  ContentWrapper,
 } from './OutdoorsEdition.styled';
-import PaginationBar from '../PaginationBar/PaginationBar';
-import PaginationInfo from '../PaginationInfo/PaginationInfo';
+import Pagination from '../Pagination/Pagination';
 
 const cardList = [
   {
@@ -226,14 +226,19 @@ const OutdoorsEdition = () => {
     return cardList.slice(sliceStart, sliceEnd);
   };
 
-  const info = { currentPage, pagesCount };
+  const config = {
+    currentPage,
+    pagesCount,
+    sectionName: 'Outdoors Edition',
+    setCurrentPage,
+    needCtrls: true,
+    needSort: false,
+  };
 
   return (
     <>
       <Section>
         <Container>
-          <PaginationBar info={info} setPage={setCurrentPage} sectionName="Outdoors Edition" />
-
           <Aside>
             <MainTitle>Featured spots</MainTitle>
 
@@ -248,30 +253,34 @@ const OutdoorsEdition = () => {
             </MainLink>
           </Aside>
 
-          <List>
-            {currentContent().map(({ uri, imageURI, place, location, description }) => (
-              <Item key={imageURI}>
-                <CardWrap>
-                  <ImageWrap>
-                    <Image src={imageURI} alt={place} />
-                  </ImageWrap>
+          <ContentWrapper>
+            <Pagination config={config} />
 
-                  <Title>{place}</Title>
+            <List>
+              {currentContent().map(({ uri, imageURI, place, location, description }) => (
+                <Item key={imageURI}>
+                  <CardWrap>
+                    <ImageWrap>
+                      <Image src={imageURI} alt={place} />
+                    </ImageWrap>
 
-                  <SubTitle>{location}</SubTitle>
+                    <Title>{place}</Title>
 
-                  <Description>{description}</Description>
-                </CardWrap>
+                    <SubTitle>{location}</SubTitle>
 
-                <Link href={uri} target="_blank" rel="noreferrer noopener">
-                  Read more
-                </Link>
-              </Item>
-            ))}
-          </List>
+                    <Description>{description}</Description>
+                  </CardWrap>
+
+                  <Link href={uri} target="_blank" rel="noreferrer noopener">
+                    Read more
+                  </Link>
+                </Item>
+              ))}
+            </List>
+
+            <Pagination config={{ ...config, needCtrls: false }} />
+          </ContentWrapper>
         </Container>
-
-        <PaginationInfo info={info} sectionName="Outdoors Edition" />
       </Section>
     </>
   );
